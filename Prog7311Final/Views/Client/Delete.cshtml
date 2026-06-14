@@ -1,0 +1,13 @@
+@model Prog7311Final.Models.Client
+
+<h2>Delete Client</h2>
+
+<h4>Are you sure?</h4>
+
+<p>@Model.Name</p>
+
+<form asp-action="Delete">
+    <input type="hidden" asp-for="ClientId" />
+    <button type="submit" class="btn btn-danger">Delete</button>
+    <a asp-action="Index" class="btn btn-secondary">Cancel</a>
+</form>
