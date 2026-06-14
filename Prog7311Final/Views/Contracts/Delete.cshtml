@@ -1,0 +1,19 @@
+@model Prog7311Final.Models.Contract
+
+<h2>Delete Contract</h2>
+
+<h4>Are you sure you want to delete this contract?</h4>
+
+<p>@Model.ContractName</p>
+
+<form asp-action="Delete">
+    <input type="hidden" asp-for="ContractId" />
+
+    <button type="submit" class="btn btn-danger">
+        Delete
+    </button>
+
+    <a asp-action="Index" class="btn btn-secondary">
+        Cancel
+    </a>
+</form>

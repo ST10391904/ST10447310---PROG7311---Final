@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Music\\Desktop\\ST10447310 - PROG7311 - POE\\PoeWebAPI\\PoeWebAPI.csproj": {}
+    "C:\\Users\\oviro\\Desktop\\New folder\\ST10447310---PROG7311---Final\\PoeWebAPI\\PoeWebAPI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Music\\Desktop\\ST10447310 - PROG7311 - POE\\PoeWebAPI\\PoeWebAPI.csproj": {
+    "C:\\Users\\oviro\\Desktop\\New folder\\ST10447310---PROG7311---Final\\PoeWebAPI\\PoeWebAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Music\\Desktop\\ST10447310 - PROG7311 - POE\\PoeWebAPI\\PoeWebAPI.csproj",
+        "projectUniqueName": "C:\\Users\\oviro\\Desktop\\New folder\\ST10447310---PROG7311---Final\\PoeWebAPI\\PoeWebAPI.csproj",
         "projectName": "PoeWebAPI",
-        "projectPath": "C:\\Users\\Music\\Desktop\\ST10447310 - PROG7311 - POE\\PoeWebAPI\\PoeWebAPI.csproj",
-        "packagesPath": "C:\\Users\\Music\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Music\\Desktop\\ST10447310 - PROG7311 - POE\\PoeWebAPI\\obj\\",
+        "projectPath": "C:\\Users\\oviro\\Desktop\\New folder\\ST10447310---PROG7311---Final\\PoeWebAPI\\PoeWebAPI.csproj",
+        "packagesPath": "C:\\Users\\oviro\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\oviro\\Desktop\\New folder\\ST10447310---PROG7311---Final\\PoeWebAPI\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Music\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\oviro\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -102,7 +102,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.200/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.203/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
