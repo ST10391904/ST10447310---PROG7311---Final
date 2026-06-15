@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "SXHHtxjmiEb+uXkHmkQ2KS9y9SaffzwZGVgwPa+FipQ=",
+  "Source": "PoeWebAPI",
+  "BasePath": "_content/PoeWebAPI",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}
