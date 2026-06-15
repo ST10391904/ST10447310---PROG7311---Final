@@ -7,8 +7,10 @@ namespace PoeWebAPI.Models
 {
     public class ContractAPI
     {
+        [Key]
+         public int ContractId { get; set; }
         public string? ContractName { get; set; }
-        public int ContractId { get; set; }
+       
         public int ClientId { get; set; }
         public DateOnly StartDate { get; set; }
         public DateOnly EndDate { get; set; }

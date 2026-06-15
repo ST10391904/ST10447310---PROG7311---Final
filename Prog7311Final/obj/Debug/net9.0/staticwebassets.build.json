@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "V1UpWnJlAS1iXAUGmRcRG+g0sR+NFoslnCf9F9uGcHs=",
+  "Hash": "anM4g70udTzKNc3PSUMnUWw47AgLd1O10tu2pPzSVXo=",
   "Source": "Prog7311Final",
   "BasePath": "_content/Prog7311Final",
   "Mode": "Default",
@@ -1443,6 +1443,48 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "C:\\Users\\Music\\Desktop\\ST10447310 - PROG7311 - POE\\Prog7311Final\\wwwroot\\FileServer\\Contracts\\01108c5a-575c-4028-b8b3-7b32fd20d660.png",
+      "SourceId": "Prog7311Final",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Music\\Desktop\\ST10447310 - PROG7311 - POE\\Prog7311Final\\wwwroot\\",
+      "BasePath": "_content/Prog7311Final",
+      "RelativePath": "FileServer/Contracts/01108c5a-575c-4028-b8b3-7b32fd20d660#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "91yqo5rnya",
+      "Integrity": "zeq37KVldn90z388t2/jZjIh3yUNvmG6x0Q1yqXggtc=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\FileServer\\Contracts\\01108c5a-575c-4028-b8b3-7b32fd20d660.png"
+    },
+    {
+      "Identity": "C:\\Users\\Music\\Desktop\\ST10447310 - PROG7311 - POE\\Prog7311Final\\wwwroot\\FileServer\\Contracts\\88820df1-f31b-4aff-85b4-e42e37590edb.png",
+      "SourceId": "Prog7311Final",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Music\\Desktop\\ST10447310 - PROG7311 - POE\\Prog7311Final\\wwwroot\\",
+      "BasePath": "_content/Prog7311Final",
+      "RelativePath": "FileServer/Contracts/88820df1-f31b-4aff-85b4-e42e37590edb#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "poruxxl0k3",
+      "Integrity": "qRx/EGjiZugU9i4WYLEdL+4BSNmCYXHMS/Ofbh/z4DI=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\FileServer\\Contracts\\88820df1-f31b-4aff-85b4-e42e37590edb.png"
     },
     {
       "Identity": "C:\\Users\\Music\\Desktop\\ST10447310 - PROG7311 - POE\\Prog7311Final\\wwwroot\\js\\site.js",
@@ -3320,6 +3362,170 @@
         {
           "Name": "integrity",
           "Value": "sha256-wfFuuYm+Lh6RbCeeiUqxw334b/hIOkp5j9eokGUM1Y0="
+        }
+      ]
+    },
+    {
+      "Route": "FileServer/Contracts/01108c5a-575c-4028-b8b3-7b32fd20d660.91yqo5rnya.png",
+      "AssetFile": "C:\\Users\\Music\\Desktop\\ST10447310 - PROG7311 - POE\\Prog7311Final\\wwwroot\\FileServer\\Contracts\\01108c5a-575c-4028-b8b3-7b32fd20d660.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "533717"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"zeq37KVldn90z388t2/jZjIh3yUNvmG6x0Q1yqXggtc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 15 Jun 2026 09:51:06 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "91yqo5rnya"
+        },
+        {
+          "Name": "label",
+          "Value": "FileServer/Contracts/01108c5a-575c-4028-b8b3-7b32fd20d660.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-zeq37KVldn90z388t2/jZjIh3yUNvmG6x0Q1yqXggtc="
+        }
+      ]
+    },
+    {
+      "Route": "FileServer/Contracts/01108c5a-575c-4028-b8b3-7b32fd20d660.png",
+      "AssetFile": "C:\\Users\\Music\\Desktop\\ST10447310 - PROG7311 - POE\\Prog7311Final\\wwwroot\\FileServer\\Contracts\\01108c5a-575c-4028-b8b3-7b32fd20d660.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "533717"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"zeq37KVldn90z388t2/jZjIh3yUNvmG6x0Q1yqXggtc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 15 Jun 2026 09:51:06 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-zeq37KVldn90z388t2/jZjIh3yUNvmG6x0Q1yqXggtc="
+        }
+      ]
+    },
+    {
+      "Route": "FileServer/Contracts/88820df1-f31b-4aff-85b4-e42e37590edb.png",
+      "AssetFile": "C:\\Users\\Music\\Desktop\\ST10447310 - PROG7311 - POE\\Prog7311Final\\wwwroot\\FileServer\\Contracts\\88820df1-f31b-4aff-85b4-e42e37590edb.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "129939"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"qRx/EGjiZugU9i4WYLEdL+4BSNmCYXHMS/Ofbh/z4DI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 15 Jun 2026 10:00:21 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-qRx/EGjiZugU9i4WYLEdL+4BSNmCYXHMS/Ofbh/z4DI="
+        }
+      ]
+    },
+    {
+      "Route": "FileServer/Contracts/88820df1-f31b-4aff-85b4-e42e37590edb.poruxxl0k3.png",
+      "AssetFile": "C:\\Users\\Music\\Desktop\\ST10447310 - PROG7311 - POE\\Prog7311Final\\wwwroot\\FileServer\\Contracts\\88820df1-f31b-4aff-85b4-e42e37590edb.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "129939"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"qRx/EGjiZugU9i4WYLEdL+4BSNmCYXHMS/Ofbh/z4DI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 15 Jun 2026 10:00:21 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "poruxxl0k3"
+        },
+        {
+          "Name": "label",
+          "Value": "FileServer/Contracts/88820df1-f31b-4aff-85b4-e42e37590edb.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-qRx/EGjiZugU9i4WYLEdL+4BSNmCYXHMS/Ofbh/z4DI="
         }
       ]
     },

@@ -12,7 +12,7 @@ namespace Prog7311Final.Models
         [Column(TypeName = "decimal(18,2)")]
         public decimal Cost { get; set; }  // stored in ZAR
 
-        public string Status { get; set; } = string.Empty;
+       public ContractStatus Status { get; set; }
 
         public Contract? Contract { get; set; }
     }

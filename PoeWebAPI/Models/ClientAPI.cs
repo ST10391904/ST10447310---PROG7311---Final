@@ -5,6 +5,7 @@ namespace PoeWebAPI.Models
 {
     public class ClientAPI
     {
+        [Key]
         public int ClientId { get; set; }
         public string Name { get; set; } = string.Empty;
         public string ContactDetails { get; set; } = string.Empty;

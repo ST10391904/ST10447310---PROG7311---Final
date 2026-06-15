@@ -2,7 +2,7 @@ using Microsoft.AspNetCore.Mvc;
 using Prog7311Final.Models;
 using System.Net.Http.Json;
 
-namespace Prog7311PoeTwo.Controllers
+namespace Prog7311Final.Controllers
 {
     public class ClientController : Controller
     {

@@ -95,3 +95,4 @@ C:\Users\Music\Desktop\ST10447310 - PROG7311 - POE\Prog7311Final\obj\Debug\net9.
 C:\Users\Music\Desktop\ST10447310 - PROG7311 - POE\Prog7311Final\obj\Debug\net9.0\Prog7311Final.pdb
 C:\Users\Music\Desktop\ST10447310 - PROG7311 - POE\Prog7311Final\obj\Debug\net9.0\Prog7311Final.genruntimeconfig.cache
 C:\Users\Music\Desktop\ST10447310 - PROG7311 - POE\Prog7311Final\obj\Debug\net9.0\ref\Prog7311Final.dll
+C:\Users\Music\Desktop\ST10447310 - PROG7311 - POE\Prog7311Final\obj\Debug\net9.0\Prog7311Final.sourcelink.json

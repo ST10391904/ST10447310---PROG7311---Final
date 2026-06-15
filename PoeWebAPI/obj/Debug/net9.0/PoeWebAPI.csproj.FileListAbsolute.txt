@@ -167,3 +167,4 @@ C:\Users\Music\Desktop\ST10447310 - PROG7311 - POE\PoeWebAPI\obj\Debug\net9.0\re
 C:\Users\Music\Desktop\ST10447310 - PROG7311 - POE\PoeWebAPI\obj\Debug\net9.0\PoeWebAPI.pdb
 C:\Users\Music\Desktop\ST10447310 - PROG7311 - POE\PoeWebAPI\obj\Debug\net9.0\PoeWebAPI.genruntimeconfig.cache
 C:\Users\Music\Desktop\ST10447310 - PROG7311 - POE\PoeWebAPI\obj\Debug\net9.0\ref\PoeWebAPI.dll
+C:\Users\Music\Desktop\ST10447310 - PROG7311 - POE\PoeWebAPI\obj\Debug\net9.0\PoeWebAPI.sourcelink.json

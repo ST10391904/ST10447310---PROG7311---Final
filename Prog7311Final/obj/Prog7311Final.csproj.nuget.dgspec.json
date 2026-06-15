@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\oviro\\Desktop\\New folder\\ST10447310---PROG7311---Final\\Prog7311Final\\Prog7311Final.csproj": {}
+    "C:\\Users\\Music\\Desktop\\ST10447310 - PROG7311 - POE\\Prog7311Final\\Prog7311Final.csproj": {}
   },
   "projects": {
-    "C:\\Users\\oviro\\Desktop\\New folder\\ST10447310---PROG7311---Final\\Prog7311Final\\Prog7311Final.csproj": {
+    "C:\\Users\\Music\\Desktop\\ST10447310 - PROG7311 - POE\\Prog7311Final\\Prog7311Final.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\oviro\\Desktop\\New folder\\ST10447310---PROG7311---Final\\Prog7311Final\\Prog7311Final.csproj",
+        "projectUniqueName": "C:\\Users\\Music\\Desktop\\ST10447310 - PROG7311 - POE\\Prog7311Final\\Prog7311Final.csproj",
         "projectName": "Prog7311Final",
-        "projectPath": "C:\\Users\\oviro\\Desktop\\New folder\\ST10447310---PROG7311---Final\\Prog7311Final\\Prog7311Final.csproj",
-        "packagesPath": "C:\\Users\\oviro\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\oviro\\Desktop\\New folder\\ST10447310---PROG7311---Final\\Prog7311Final\\obj\\",
+        "projectPath": "C:\\Users\\Music\\Desktop\\ST10447310 - PROG7311 - POE\\Prog7311Final\\Prog7311Final.csproj",
+        "packagesPath": "C:\\Users\\Music\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Music\\Desktop\\ST10447310 - PROG7311 - POE\\Prog7311Final\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\oviro\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Music\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -68,7 +68,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.203/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.200/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

@@ -2,7 +2,6 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Prog7311Final.Models;
 using System.Net.Http.Json;
-using System;
 
 namespace Prog7311Final.Controllers
 {
@@ -30,8 +29,21 @@ namespace Prog7311Final.Controllers
 
         public async Task<IActionResult> Index()
         {
-            var contracts = await _http.GetFromJsonAsync<List<Contract>>(_baseUrl);
-            return View(contracts);
+            try
+            {
+                var response = await _http.GetAsync(_baseUrl);
+
+                if (!response.IsSuccessStatusCode)
+                    return View(new List<Contract>());
+
+                var contracts = await response.Content.ReadFromJsonAsync<List<Contract>>();
+
+                return View(contracts ?? new List<Contract>());
+            }
+            catch
+            {
+                return View(new List<Contract>());
+            }
         }
 
         public async Task<IActionResult> Create()
@@ -41,49 +53,52 @@ namespace Prog7311Final.Controllers
             return View();
         }
 
-[HttpPost]
-[ValidateAntiForgeryToken]
-public async Task<IActionResult> Create(Contract contract)
-{
-    if (!ModelState.IsValid)
-    {
-        await LoadClients();
-        SetCurrencies();
-        return View(contract);
-    }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Create(Contract contract)
+        {
+            if (!ModelState.IsValid)
+            {
+                await LoadClients();
+                SetCurrencies();
+                return View(contract);
+            }
 
-    await SaveFile(contract);
+            await SaveFile(contract);
 
-    var dto = new ContractDTO
-    {
-        ContractName = contract.ContractName,
-        ClientID = contract.ClientId,
-        Currency = contract.Currency,
-        Amount = contract.Amount,
+            var dto = new ContractDTO
+            {
+                ContractName = contract.ContractName,
+                ClientID = contract.ClientId,
+                Currency = contract.Currency,
+                Amount = contract.Amount,
+                StartDate = contract.StartDate,
+                EndDate = contract.EndDate,
+                Status = contract.Status,
+                FileName = contract.FileName,
+                FilePath = contract.FilePath
+            };
 
-        StartDate = contract.StartDate,
-        EndDate = contract.EndDate,
-        Status = contract.Status,
+            var response = await _http.PostAsJsonAsync(_baseUrl, dto);
 
-        FileName = contract.FileName,
-        FilePath = contract.FilePath
-    };
+            if (response.IsSuccessStatusCode)
+                return RedirectToAction(nameof(Index));
 
-    var response = await _http.PostAsJsonAsync(_baseUrl, dto);
+            await LoadClients();
+            SetCurrencies();
 
-    if (response.IsSuccessStatusCode)
-        return RedirectToAction(nameof(Index));
+            ModelState.AddModelError("", "API Error");
+            return View(contract);
+        }
 
-    var error = await response.Content.ReadAsStringAsync();
-    ModelState.AddModelError("", $"API Error: {error}");
-
-    await LoadClients();
-    SetCurrencies();
-    return View(contract);
-}
         public async Task<IActionResult> Edit(int id)
         {
-            var contract = await _http.GetFromJsonAsync<Contract>($"{_baseUrl}/{id}");
+            var response = await _http.GetAsync($"{_baseUrl}/{id}");
+
+            if (!response.IsSuccessStatusCode)
+                return NotFound();
+
+            var contract = await response.Content.ReadFromJsonAsync<Contract>();
             if (contract == null) return NotFound();
 
             await LoadClients();
@@ -91,54 +106,56 @@ public async Task<IActionResult> Create(Contract contract)
             return View(contract);
         }
 
-       [HttpPost]
-[ValidateAntiForgeryToken]
-public async Task<IActionResult> Edit(int id, Contract contract)
-{
-    if (id != contract.ContractId)
-        return NotFound();
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Edit(int id, Contract contract)
+        {
+            if (id != contract.ContractId)
+                return NotFound();
 
-    if (!ModelState.IsValid)
-    {
-        await LoadClients();
-        SetCurrencies();
-        return View(contract);
-    }
+            if (!ModelState.IsValid)
+            {
+                await LoadClients();
+                SetCurrencies();
+                return View(contract);
+            }
 
-    await SaveFile(contract);
+            await SaveFile(contract);
 
-    var dto = new ContractDTO
-    {
-        ContractName = contract.ContractName,
-        ClientID = contract.ClientId,
-        Currency = contract.Currency,
-        Amount = contract.Amount,
+            var dto = new ContractDTO
+            {
+                ContractName = contract.ContractName,
+                ClientID = contract.ClientId,
+                Currency = contract.Currency,
+                Amount = contract.Amount,
+                StartDate = contract.StartDate,
+                EndDate = contract.EndDate,
+                Status = contract.Status,
+                FileName = contract.FileName,
+                FilePath = contract.FilePath
+            };
 
-        StartDate = contract.StartDate,
-        EndDate = contract.EndDate,
-        Status = contract.Status,
+            var response = await _http.PutAsJsonAsync($"{_baseUrl}/{id}", dto);
 
-        FileName = contract.FileName,
-        FilePath = contract.FilePath
-    };
+            if (response.IsSuccessStatusCode)
+                return RedirectToAction(nameof(Index));
 
-    var response = await _http.PutAsJsonAsync($"{_baseUrl}/{id}", dto);
+            await LoadClients();
+            SetCurrencies();
 
-    if (response.IsSuccessStatusCode)
-        return RedirectToAction(nameof(Index));
-
-    var error = await response.Content.ReadAsStringAsync();
-    ModelState.AddModelError("", $"API Error: {error}");
-
-    await LoadClients();
-    SetCurrencies();
-    return View(contract);
-}
+            ModelState.AddModelError("", "API Error");
+            return View(contract);
+        }
 
         public async Task<IActionResult> Delete(int id)
         {
-            var contract = await _http.GetFromJsonAsync<Contract>($"{_baseUrl}/{id}");
-            return contract == null ? NotFound() : View(contract);
+            var response = await _http.GetAsync($"{_baseUrl}/{id}");
+
+            if (!response.IsSuccessStatusCode)
+                return NotFound();
+
+            var contract = await response.Content.ReadFromJsonAsync<Contract>();
+            return View(contract);
         }
 
         [HttpPost, ActionName("Delete")]
@@ -151,13 +168,26 @@ public async Task<IActionResult> Edit(int id, Contract contract)
 
         private async Task LoadClients()
         {
-            var clients = await _http.GetFromJsonAsync<List<Client>>(_clientUrl);
+            try
+            {
+                var response = await _http.GetAsync(_clientUrl);
 
-            ViewBag.Clients = new SelectList(
-                clients ?? new List<Client>(),
-                "ClientID",
-                "ClientName"
-            );
+                if (!response.IsSuccessStatusCode)
+                {
+                    ViewBag.Clients = new SelectList(new List<Client>(), "ClientId", "Name");
+                    return;
+                }
+
+                var clients = await response.Content.ReadFromJsonAsync<List<Client>>();
+
+                clients ??= new List<Client>();
+
+                ViewBag.Clients = new SelectList(clients, "ClientId", "Name");
+            }
+            catch
+            {
+                ViewBag.Clients = new SelectList(new List<Client>(), "ClientId", "Name");
+            }
         }
 
         private void SetCurrencies()
@@ -188,6 +218,4 @@ public async Task<IActionResult> Edit(int id, Contract contract)
             contract.FilePath = "/FileServer/Contracts/" + fileName;
         }
     }
-
-    
 }

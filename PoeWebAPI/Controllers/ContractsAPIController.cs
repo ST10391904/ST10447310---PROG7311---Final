@@ -8,12 +8,12 @@ namespace PoeWebAPI
 {
     [ApiController]
     [Route("api/contracts")]
-    public class ContractControllerAPI : ControllerBase
+    public class ContractsControllerAPI : ControllerBase
     {
         private readonly AppDbContext _context;
         private readonly ApiService _currencyService;
 
-        public ContractControllerAPI(AppDbContext context, ApiService currencyService)
+        public ContractsControllerAPI(AppDbContext context, ApiService currencyService)
         {
             _context = context;
             _currencyService = currencyService;
@@ -45,30 +45,39 @@ namespace PoeWebAPI
 [HttpPost]
 public async Task<IActionResult> Create([FromBody] ContractDTO dto)
 {
-    if (!ModelState.IsValid)
-        return BadRequest(ModelState);
-
-    var contract = new ContractAPI
+    try
     {
-        ContractName = dto.ContractName,
-        ClientId = dto.ClientID,
-        Currency = dto.Currency,
-        Amount = dto.Amount,
-        StartDate = dto.StartDate,
-        EndDate = dto.EndDate,
-        Status = dto.Status,
-        FileName = dto.FileName,
-        FilePath = dto.FilePath
-    };
+        if (!ModelState.IsValid)
+            return BadRequest(ModelState);
 
-    contract.AmountInZAR = await Convert(contract);
+        var contract = new ContractAPI
+        {
+            ContractName = dto.ContractName,
+            ClientId = dto.ClientID,
+            Currency = dto.Currency,
+            Amount = dto.Amount,
+            StartDate = dto.StartDate,
+            EndDate = dto.EndDate,
+            Status = dto.Status,
+            FileName = dto.FileName,
+            FilePath = dto.FilePath
+        };
 
-    _context.Contracts.Add(contract);
-    await _context.SaveChangesAsync();
+        contract.AmountInZAR = await Convert(contract);
 
-    return CreatedAtAction(nameof(GetById), new { id = contract.ContractId }, contract);
+        _context.Contracts.Add(contract);
+
+        await _context.SaveChangesAsync();
+
+        return CreatedAtAction(nameof(GetById),
+            new { id = contract.ContractId },
+            contract);
+    }
+    catch (Exception ex)
+    {
+        return BadRequest(ex.ToString());
+    }
 }
-
 [HttpPut("{id}")]
 public async Task<IActionResult> Update(int id, [FromBody] ContractDTO dto)
 {
@@ -108,17 +117,20 @@ public async Task<IActionResult> Update(int id, [FromBody] ContractDTO dto)
             return NoContent();
         }
 
-        private async Task<decimal> Convert(ContractAPI contract)
-        {
-            
-                return await _currencyService.ConvertToZAR(
-                    contract.Currency,
-                    contract.Amount
-                );
-            
-        
+       private async Task<decimal> Convert(ContractAPI contract)
+{
+    try
+    {
+        return await _currencyService.ConvertToZAR(
+            contract.Currency,
+            contract.Amount
+        );
     }
-
-    
+    catch (Exception ex)
+    {
+        Console.WriteLine(ex.Message);
+        return contract.Amount;
+    }
+}
 }
 }

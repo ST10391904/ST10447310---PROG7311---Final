@@ -21,7 +21,8 @@ namespace Prog7311Final.Controllers
             DateOnly? startDate,
             DateOnly? endDate)
         {
-            var url = $"{_baseUrl}?Name={Name}&status={status}&startDate={startDate}&endDate={endDate}";
+            var url =
+            $"{_baseUrl}?clientName={Name}&status={status}&startDate={startDate}&endDate={endDate}";
 
             var data = await _http.GetFromJsonAsync<List<ServiceRequest>>(url);
             return View(data);
